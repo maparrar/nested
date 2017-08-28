@@ -29,10 +29,10 @@ Multidimentional and inexpensive data format
 plain:
 	╚2╬3╬int╬centi╬Centimeter╬0╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0╚N╬6╬int╬another╬Another╬0
 indented:
-	╚2╬3╬int╬centi╬Centimeter╬0
-	  ╚3╬4╬int╬milli╬Millimeter╬0
-	    ╚N╬5╬int╬other╬Other╬0
-		╚N╬6╬int╬another╬Another╬0
+   ╚2╬3╬int╬centi╬Centimeter╬0
+     ╚3╬4╬int╬milli╬Millimeter╬0
+       ╚N╬5╬int╬other╬Other╬0
+       ╚N╬6╬int╬another╬Another╬0
 ```
 * Level 3:
 ```
