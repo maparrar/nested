@@ -14,15 +14,24 @@ Multidimentional and inexpensive data format
 
 
 Level N:
-	```╚level╬id╬type╬name╬label╬default```
-	```╚3╬2╬int╬milli╬Milimeter╬0```
+	```
+		╚level╬id╬type╬name╬label╬default
+	```
+	Example:
+	```
+		╚3╬2╬int╬milli╬Milimeter╬0
+	```
 
 
 
 ## Data format
-	```└level┼id┼value```
-
-	```└3┼2┼80```
+	```
+		└level┼id┼value
+	```
+	Example:
+	```
+		└3┼2┼80
+	```
 
 
 -- 8.283.827 caracteres
