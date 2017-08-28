@@ -26,15 +26,22 @@ Multidimentional and inexpensive data format
 * Level 2:
 ```
 ╚2╬3╬int╬centi╬Centimeter╬0
+plain:
+	╚2╬3╬int╬centi╬Centimeter╬0╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0╚N╬6╬int╬another╬Another╬0
+indented:
+	╚2╬3╬int╬centi╬Centimeter╬0
+	  ╚3╬4╬int╬milli╬Millimeter╬0
+	    ╚N╬5╬int╬other╬Other╬0
+		 ╚N╬6╬int╬another╬Another╬0
 ```
 * Level 3:
 ```
 plain:
-	╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0
+	╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0╚N╬6╬int╬another╬Another╬0
 indented:
 	╚3╬4╬int╬milli╬Millimeter╬0
 	  ╚N╬5╬int╬other╬Other╬0
-	  ╚N╬6╬int╬other╬Other╬0
+	  ╚N╬6╬int╬another╬Another╬0
 ```
 * Level N:
 ```
