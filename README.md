@@ -13,13 +13,32 @@ Multidimentional and inexpensive data format
 
 
 
-Level N:
+
+### Levels:
 ```
 ╚level╬id╬type╬name╬label╬default
 ```
-Example:
+### Example:
+* Level 1:
 ```
-╚3╬2╬int╬milli╬Milimeter╬0
+╚1╬2╬int╬meter╬Meter╬0
+```
+* Level 2:
+```
+╚2╬3╬int╬centi╬Centimeter╬0
+```
+* Level 3:
+```
+plain:
+	╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0
+indented:
+	╚3╬4╬int╬milli╬Millimeter╬0
+	  ╚N╬5╬int╬other╬Other╬0
+	  ╚N╬6╬int╬other╬Other╬0
+```
+* Level N:
+```
+╚N╬5╬int╬other╬Other╬0
 ```
 
 
