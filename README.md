@@ -19,8 +19,7 @@ Multidimentional and inexpensive data format
 ╚level╬id╬type╬name╬label╬default
 ```
 ### Examples:
-** Level 1:**
-
+**Level 1:**
 * plain:
 ```
 ╚1╬1╬int╬meter╬Meter╬0╚2╬3╬int╬centi╬Centimeter╬0╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0╚N╬6╬int╬another╬Another╬0╚1╬2╬int╬meter╬Meter╬0╚2╬3╬int╬centi╬Centimeter╬0╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0╚N╬6╬int╬another╬Another╬0
@@ -39,7 +38,19 @@ Multidimentional and inexpensive data format
             ╚N╬6╬int╬another╬Another╬0
 ```
 
-* Level 2:
+**Level 2:**
+* plain:
+```
+╚2╬3╬int╬centi╬Centimeter╬0╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0╚N╬6╬int╬another╬Another╬0
+```
+* indented:
+```
+      ╚2╬3╬int╬centi╬Centimeter╬0
+          ╚3╬4╬int╬milli╬Millimeter╬0
+            ╚N╬5╬int╬other╬Other╬0
+            ╚N╬6╬int╬another╬Another╬0
+```
+
 ```
 plain:
    ╚2╬3╬int╬centi╬Centimeter╬0╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0╚N╬6╬int╬another╬Another╬0
@@ -49,7 +60,8 @@ indented:
        ╚N╬5╬int╬other╬Other╬0
        ╚N╬6╬int╬another╬Another╬0
 ```
-* Level 3:
+
+**Level 3:**
 ```
 plain:
    ╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0╚N╬6╬int╬another╬Another╬0
@@ -58,7 +70,8 @@ indented:
      ╚N╬5╬int╬other╬Other╬0
      ╚N╬6╬int╬another╬Another╬0
 ```
-* Level N:
+
+**Level N:**
 ```
 ╚N╬5╬int╬other╬Other╬0
 ```
