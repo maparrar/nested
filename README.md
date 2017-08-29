@@ -38,6 +38,7 @@ Multidimentional and inexpensive data format
             ╚N╬5╬int╬other╬Other╬0
             ╚N╬6╬int╬another╬Another╬0
 ```
+
 * Level 2:
 ```
 plain:
