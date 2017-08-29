@@ -11,61 +11,60 @@ Multidimentional and inexpensive data format
 
 ## Headers format
 
-
-
+### Metadata:
 
 ### Levels:
 ```
-╚level╬id╬type╬name╬label╬default
+╚level╬id╬type╬name╬label╬description╬default╚...sublevels...
 ```
 ### Examples:
 **Level 1:**
 * plain:
 ```
-╚1╬1╬int╬meter╬Meter╬0╚2╬3╬int╬centi╬Centimeter╬0╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0╚N╬6╬int╬another╬Another╬0╚1╬2╬int╬meter╬Meter╬0╚2╬3╬int╬centi╬Centimeter╬0╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0╚N╬6╬int╬another╬Another╬0
+╚1╬1╬int╬meter╬Meter╬╬0╚2╬3╬int╬centi╬Centimeter╬╬0╚3╬4╬int╬milli╬Millimeter╬╬0╚N╬5╬int╬other╬Other╬╬0╚N╬6╬int╬another╬Another╬╬0╚1╬2╬int╬meter╬Meter╬╬0╚2╬3╬int╬centi╬Centimeter╬╬0╚3╬4╬int╬milli╬Millimeter╬╬0╚N╬5╬int╬other╬Other╬╬0╚N╬6╬int╬another╬Another╬╬0
 ```
 * indented:
 ```
-      ╚1╬1╬int╬meter╬Meter╬0
-        ╚2╬3╬int╬centi╬Centimeter╬0
-          ╚3╬4╬int╬milli╬Millimeter╬0
-            ╚N╬5╬int╬other╬Other╬0
-            ╚N╬6╬int╬another╬Another╬0
-      ╚1╬2╬int╬meter╬Meter╬0
-        ╚2╬3╬int╬centi╬Centimeter╬0
-          ╚3╬4╬int╬milli╬Millimeter╬0
-            ╚N╬5╬int╬other╬Other╬0
-            ╚N╬6╬int╬another╬Another╬0
+      ╚1╬1╬int╬meter╬Meter╬╬0
+        ╚2╬3╬int╬centi╬Centimeter╬╬0
+          ╚3╬4╬int╬milli╬Millimeter╬╬0
+            ╚N╬5╬int╬other╬Other╬╬0
+            ╚N╬6╬int╬another╬Another╬╬0
+      ╚1╬2╬int╬meter╬Meter╬╬0
+        ╚2╬3╬int╬centi╬Centimeter╬╬0
+          ╚3╬4╬int╬milli╬Millimeter╬╬0
+            ╚N╬5╬int╬other╬Other╬╬0
+            ╚N╬6╬int╬another╬Another╬╬0
 ```
 
 **Level 2:**
 * plain:
 ```
-╚2╬3╬int╬centi╬Centimeter╬0╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0╚N╬6╬int╬another╬Another╬0
+╚2╬3╬int╬centi╬Centimeter╬╬0╚3╬4╬int╬milli╬Millimeter╬╬0╚N╬5╬int╬other╬Other╬╬0╚N╬6╬int╬another╬Another╬╬0
 ```
 * indented:
 ```
-      ╚2╬3╬int╬centi╬Centimeter╬0
-        ╚3╬4╬int╬milli╬Millimeter╬0
-          ╚N╬5╬int╬other╬Other╬0
-          ╚N╬6╬int╬another╬Another╬0
+      ╚2╬3╬int╬centi╬Centimeter╬╬0
+        ╚3╬4╬int╬milli╬Millimeter╬╬0
+          ╚N╬5╬int╬other╬Other╬╬0
+          ╚N╬6╬int╬another╬Another╬╬0
 ```
 
 **Level 3:**
 * plain:
 ```
-╚3╬4╬int╬milli╬Millimeter╬0╚N╬5╬int╬other╬Other╬0╚N╬6╬int╬another╬Another╬0
+╚3╬4╬int╬milli╬Millimeter╬╬0╚N╬5╬int╬other╬Other╬╬0╚N╬6╬int╬another╬Another╬╬0
 ```
 * indented:
 ```
-      ╚3╬4╬int╬milli╬Millimeter╬0
-        ╚N╬5╬int╬other╬Other╬0
-        ╚N╬6╬int╬another╬Another╬0
+      ╚3╬4╬int╬milli╬Millimeter╬╬0
+        ╚N╬5╬int╬other╬Other╬╬0
+        ╚N╬6╬int╬another╬Another╬╬0
 ```
 
 **Level N:**
 ```
-╚N╬5╬int╬other╬Other╬0
+╚N╬5╬int╬other╬Other╬╬0
 ```
 
 
