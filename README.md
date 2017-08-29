@@ -3,7 +3,7 @@ Multidimentional and inexpensive data format
 
 
 
-## [data_types] Data types
+## <a name="data_types"></a>Data types
 * int
 * float
 * bool
@@ -20,7 +20,7 @@ Multidimentional and inexpensive data format
 - level: Level number [0,...]
 - id: Identifier of the category. Unique value.
 - open: If will be show as open by default
-- type: Available data types: [data_types][]
+- type: Available data types: [data types](#data_types)
 ### Examples:
 **Level 1:**
 * plain:
