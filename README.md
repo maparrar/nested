@@ -4,14 +4,19 @@ Multidimentional and inexpensive data format
 
 
 ## <a name="data_types"></a>Data types
-* int
-* float
-* bool
-* string
+* i: int
+* f: float
+* b: bool
+* s: string
 
 ## Headers format
 
 ### Metadata:
+```
+»id║field_1║field_2║field_3║...║field_M
+```
+- id: Register identifier
+- field_M: Any additional field that will not shown
 
 ### Levels:
 ```
@@ -19,7 +24,7 @@ Multidimentional and inexpensive data format
 ```
 - level: Category level number [0,...]
 - id: Identifier of the category. Unique value, could be integer or string.
-- open: If will be show as open by default
+- open: If will be show as open by default [t, f]
 - type: Available [data types](#data_types)
 - name: Category name
 - label: Category label to show
@@ -31,53 +36,71 @@ Multidimentional and inexpensive data format
 **Level 1:**
 * plain:
 ```
-╚1╬1╬int╬meter╬Meter╬╬0╚2╬3╬int╬centi╬Centimeter╬╬0╚3╬4╬int╬milli╬Millimeter╬╬0╚N╬5╬int╬other╬Other╬╬0╚N╬6╬int╬another╬Another╬╬0╚1╬2╬int╬meter╬Meter╬╬0╚2╬3╬int╬centi╬Centimeter╬╬0╚3╬4╬int╬milli╬Millimeter╬╬0╚N╬5╬int╬other╬Other╬╬0╚N╬6╬int╬another╬Another╬╬0
+╚1╬1╬i╬meter╬Meter╬╬0╚2╬3╬i╬centi╬Centimeter╬╬0╚3╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0╚1╬2╬i╬meter╬Meter╬╬0╚2╬3╬i╬centi╬Centimeter╬╬0╚3╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
 ```
 * indented:
 ```
-      ╚1╬1╬int╬meter╬Meter╬╬0
-        ╚2╬3╬int╬centi╬Centimeter╬╬0
-          ╚3╬4╬int╬milli╬Millimeter╬╬0
-            ╚N╬5╬int╬other╬Other╬╬0
-            ╚N╬6╬int╬another╬Another╬╬0
-      ╚1╬2╬int╬meter╬Meter╬╬0
-        ╚2╬3╬int╬centi╬Centimeter╬╬0
-          ╚3╬4╬int╬milli╬Millimeter╬╬0
-            ╚N╬5╬int╬other╬Other╬╬0
-            ╚N╬6╬int╬another╬Another╬╬0
+      ╚1╬1╬i╬meter╬Meter╬╬0
+        ╚2╬3╬i╬centi╬Centimeter╬╬0
+          ╚3╬4╬i╬milli╬Millimeter╬╬0
+            ╚N╬5╬i╬other╬Other╬╬0
+            ╚N╬6╬i╬another╬Another╬╬0
+      ╚1╬2╬i╬meter╬Meter╬╬0
+        ╚2╬3╬i╬centi╬Centimeter╬╬0
+          ╚3╬4╬i╬milli╬Millimeter╬╬0
+            ╚N╬5╬i╬other╬Other╬╬0
+            ╚N╬6╬i╬another╬Another╬╬0
 ```
 
 **Level 2:**
 * plain:
 ```
-╚2╬3╬int╬centi╬Centimeter╬╬0╚3╬4╬int╬milli╬Millimeter╬╬0╚N╬5╬int╬other╬Other╬╬0╚N╬6╬int╬another╬Another╬╬0
+╚2╬3╬i╬centi╬Centimeter╬╬0╚3╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
 ```
 * indented:
 ```
-      ╚2╬3╬int╬centi╬Centimeter╬╬0
-        ╚3╬4╬int╬milli╬Millimeter╬╬0
-          ╚N╬5╬int╬other╬Other╬╬0
-          ╚N╬6╬int╬another╬Another╬╬0
+      ╚2╬3╬i╬centi╬Centimeter╬╬0
+        ╚3╬4╬i╬milli╬Millimeter╬╬0
+          ╚N╬5╬i╬other╬Other╬╬0
+          ╚N╬6╬i╬another╬Another╬╬0
 ```
 
 **Level 3:**
 * plain:
 ```
-╚3╬4╬int╬milli╬Millimeter╬╬0╚N╬5╬int╬other╬Other╬╬0╚N╬6╬int╬another╬Another╬╬0
+╚3╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
 ```
 * indented:
 ```
-      ╚3╬4╬int╬milli╬Millimeter╬╬0
-        ╚N╬5╬int╬other╬Other╬╬0
-        ╚N╬6╬int╬another╬Another╬╬0
+      ╚3╬4╬i╬milli╬Millimeter╬╬0
+        ╚N╬5╬i╬other╬Other╬╬0
+        ╚N╬6╬i╬another╬Another╬╬0
 ```
 
 **Level N:**
 ```
-╚N╬5╬int╬other╬Other╬╬0
+╚N╬5╬i╬other╬Other╬╬0
 ```
 
-
+**Level 1 with Metadata:**
+* plain:
+```
+»id║color║height║width╚1╬1╬i╬meter╬Meter╬╬0╚2╬3╬i╬centi╬Centimeter╬╬0╚3╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0╚1╬2╬i╬meter╬Meter╬╬0╚2╬3╬i╬centi╬Centimeter╬╬0╚3╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
+```
+* indented:
+```
+		»id║color║height║width
+      ╚1╬1╬i╬meter╬Meter╬╬0
+        ╚2╬3╬i╬centi╬Centimeter╬╬0
+          ╚3╬4╬i╬milli╬Millimeter╬╬0
+            ╚N╬5╬i╬other╬Other╬╬0
+            ╚N╬6╬i╬another╬Another╬╬0
+      ╚1╬2╬i╬meter╬Meter╬╬0
+        ╚2╬3╬i╬centi╬Centimeter╬╬0
+          ╚3╬4╬i╬milli╬Millimeter╬╬0
+            ╚N╬5╬i╬other╬Other╬╬0
+            ╚N╬6╬i╬another╬Another╬╬0
+```
 
 ## Data format
 
@@ -107,12 +130,7 @@ Example:
 
 HEADERS:
 	Register:
-		»[id] => 24
-        [bag_id] => 16
-        [fleet_id] => 3
-        [taxi_bag_label] => 2013 Segundo semestre
-        [total_days] => 31
-        [city_name] => Bogotá
+
 
 
 	Level1:
