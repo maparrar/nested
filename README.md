@@ -11,19 +11,13 @@ Multidimentional and inexpensive data format
 
 ## Headers format
 
-### Metadata:
-```
-»id║field_1║field_2║field_3║...║field_M
-```
-- id: Register identifier
-- field_M: Any additional field that is not going to be shown
-
 ### Levels:
 ```
-╚level╬id╬open╬type╬name╬label╬description╬default╚...sublevels...
+╚level╬id╬visible╬open╬type╬name╬label╬description╬default╚...sublevels...
 ```
 - level: Category level number [0,...]
 - id: Identifier of the category. Unique value, could be integer or string
+- visible: If will be show [t, f]
 - open: If will be show as open by default [t, f]
 - type: Available [data types](#data_types)
 - name: Category name
@@ -44,184 +38,99 @@ Multidimentional and inexpensive data format
 **Level 1:**
 * plain:
 ```
-╚0╬1╬i╬meter╬Meter╬╬0╚1╬3╬i╬centi╬Centimeter╬╬0╚2╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0╚0╬2╬i╬meter╬Meter╬╬0╚1╬3╬i╬centi╬Centimeter╬╬0╚2╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
+╚0╬1╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0╚0╬2╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0
 ```
 * indented:
 ```
-      ╚0╬1╬i╬meter╬Meter╬╬0
-        ╚1╬3╬i╬centi╬Centimeter╬╬0
-          ╚2╬4╬i╬milli╬Millimeter╬╬0
-            ╚N╬5╬i╬other╬Other╬╬0
-            ╚N╬6╬i╬another╬Another╬╬0
-      ╚0╬2╬i╬meter╬Meter╬╬0
-        ╚1╬3╬i╬centi╬Centimeter╬╬0
-          ╚2╬4╬i╬milli╬Millimeter╬╬0
-            ╚N╬5╬i╬other╬Other╬╬0
-            ╚N╬6╬i╬another╬Another╬╬0
+      ╚0╬1╬t╬t╬i╬meter╬Meter╬╬0
+        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
+          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
+            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
+            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
+      ╚0╬2╬t╬t╬i╬meter╬Meter╬╬0
+        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
+          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
+            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
+            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
 ```
 
 **Level 2:**
 * plain:
 ```
-╚1╬3╬i╬centi╬Centimeter╬╬0╚2╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
+╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0
 ```
 * indented:
 ```
-      ╚1╬3╬i╬centi╬Centimeter╬╬0
-        ╚2╬4╬i╬milli╬Millimeter╬╬0
-          ╚N╬5╬i╬other╬Other╬╬0
-          ╚N╬6╬i╬another╬Another╬╬0
+      ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
+        ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
+          ╚N╬5╬t╬t╬i╬other╬Other╬╬0
+          ╚N╬6╬t╬t╬i╬another╬Another╬╬0
 ```
 
 **Level 3:**
 * plain:
 ```
-╚2╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
+╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0
 ```
 * indented:
 ```
-      ╚2╬4╬i╬milli╬Millimeter╬╬0
-        ╚N╬5╬i╬other╬Other╬╬0
-        ╚N╬6╬i╬another╬Another╬╬0
+      ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
+        ╚N╬5╬t╬t╬i╬other╬Other╬╬0
+        ╚N╬6╬t╬t╬i╬another╬Another╬╬0
 ```
 
 **Level N:**
 ```
-╚N╬5╬i╬other╬Other╬╬0
+╚N╬5╬t╬t╬i╬other╬Other╬╬0
 ```
 
 **Level 1 with Metadata:**
 * plain:
 ```
-»id║color║height║width╚0╬1╬i╬meter╬Meter╬╬0╚1╬3╬i╬centi╬Centimeter╬╬0╚2╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0╚0╬2╬i╬meter╬Meter╬╬0╚1╬3╬i╬centi╬Centimeter╬╬0╚2╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
+»id║color║height║width╚0╬1╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0╚0╬2╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0
 ```
 * indented:
 ```
       »id║color║height║width
-      ╚0╬1╬i╬meter╬Meter╬╬0
-        ╚1╬3╬i╬centi╬Centimeter╬╬0
-          ╚2╬4╬i╬milli╬Millimeter╬╬0
-            ╚N╬5╬i╬other╬Other╬╬0
-            ╚N╬6╬i╬another╬Another╬╬0
-      ╚0╬2╬i╬meter╬Meter╬╬0
-        ╚1╬3╬i╬centi╬Centimeter╬╬0
-          ╚2╬4╬i╬milli╬Millimeter╬╬0
-            ╚N╬5╬i╬other╬Other╬╬0
-            ╚N╬6╬i╬another╬Another╬╬0
+      ╚0╬1╬t╬t╬i╬meter╬Meter╬╬0
+        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
+          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
+            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
+            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
+      ╚0╬2╬t╬t╬i╬meter╬Meter╬╬0
+        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
+          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
+            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
+            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
 ```
 
-=============================================================
-## Data format
-
-
+**Level 1 with Metadata and data:**
+* plain:
 ```
-└level┼id┼value
+»id║color║height║width╚0╬1╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0╚0╬2╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0
 ```
-Example:
+* indented:
 ```
-└3┼2┼80
+      »id║color║height║width
+      ╚0╬1╬t╬t╬i╬meter╬Meter╬╬0
+        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
+          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
+            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
+            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
+      ╚0╬2╬t╬t╬i╬meter╬Meter╬╬0
+        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
+          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
+            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
+            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
+
+		╚0╬1╬t╬t╬i╬meter╬Meter╬╬0
+        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
+          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
+            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
+            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
+      ╚0╬2╬t╬t╬i╬meter╬Meter╬╬0
+        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
+          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
+            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
+            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
 ```
-
-
--- 8.283.827 caracteres
-
-»
-†
-‡
-«
-|
-¦
-µ
-ǁ
-ǂ
-Ͱ
-╟
-
-HEADERS:
-	Register:
-
-
-
-	Level1:
-		╠id═type═name═label═default┣subcategory1├field11├field12┣subcategory2├field21├field22
-		i.e.
-			Categoría:
-			╠1═utilizacion══desplegar┣1╍ideal╍╍2512000├1╌ideal╌╌2512000┣2╍programmed╍╍1942000├2╌programacion╌╌1942000
-				Indentada:
-				╠1═utilizacion══desplegar
-					┣1╍ideal╍╍2512000
-						├1╌ideal╌╌2512000
-					┣2╍programmed╍╍1942000
-						├2╌programacion╌╌1942000
-
-	Subcategories:
-		┣id╍name╍label╍value├field1├field2├...
-		i.e.
-			Subcategoría:
-			┣1╍ideal╍╍2512000├1╌ideal╌╌2512000
-				Indentada:
-				┣1╍ideal╍╍2512000
-					├1╌ideal╌╌2512000
-
-			Subcategoría:
-			┣2╍programmed╍╍1942000├2╌programacion╌╌1942000
-				Indentada:
-				┣2╍programmed╍╍1942000
-					├2╌programacion╌╌1942000
-
-
-	Fields:
-		├id╌type╌name╌label╌default
-		i.e.
-			├5╌integer╌plate╌Placa╌WCM248
-			├1╌ideal╌╌2512000
-			├2╌programacion╌╌1942000
-
-
-
-
-DATA:
-
-	Register:
-		[id] => 24
-        [bag_id] => 16
-        [fleet_id] => 3
-        [taxi_bag_label] => 2013 Segundo semestre
-        [total_days] => 31
-        [city_name] => Bogotá
-
-
-	Categories:
-		╠id═name═label═value┣subcategory1├field11├field12┣subcategory2├field21├field22
-		i.e.
-			Categoría:
-			╠1═utilizacion══desplegar┣1╍ideal╍╍2512000├1╌ideal╌╌2512000┣2╍programmed╍╍1942000├2╌programacion╌╌1942000
-				Indentada:
-				╠1═utilizacion══desplegar
-					┣1╍ideal╍╍2512000
-						├1╌ideal╌╌2512000
-					┣2╍programmed╍╍1942000
-						├2╌programacion╌╌1942000
-
-	Subcategories:
-		┣id╍name╍label╍value├field1├field2├...
-		i.e.
-			Subcategoría:
-			┣1╍ideal╍╍2512000├1╌ideal╌╌2512000
-				Indentada:
-				┣1╍ideal╍╍2512000
-					├1╌ideal╌╌2512000
-
-			Subcategoría:
-			┣2╍programmed╍╍1942000├2╌programacion╌╌1942000
-				Indentada:
-				┣2╍programmed╍╍1942000
-					├2╌programacion╌╌1942000
-
-
-	Fields:
-		├id╌name╌label╌value
-		i.e.
-			├5╌plate╌Placa╌WCM248
-			├1╌ideal╌╌2512000
-			├2╌programacion╌╌1942000
