@@ -28,10 +28,11 @@ Multidimentional and inexpensive data format
 
 ## Data format
 ```
-└level┼id┼value
+├record_id└level┼cat_id┼value└level┼cat_id┼value
 ```
+- record_id: Record identifier
 - level: Category level number [0,...]
-- id: Identifier of the category
+- cat_id: Identifier of the category
 - value: Value for the register in the level and category
 
 ## Examples:
@@ -103,14 +104,32 @@ Multidimentional and inexpensive data format
             ╚N╬5╬t╬t╬i╬other╬Other╬╬0
             ╚N╬6╬t╬t╬i╬another╬Another╬╬0
       # Data
-      └0┼1┼qwe
-        └1┼2┼ert
-          └2┼4┼tyu
-            └N┼5┼zxc
-            └N┼5┼dfs
-      ╚0╬2╬t╬t╬i╬meter╬Meter╬╬0
-        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
-          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
-            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
-            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
+      ├123
+      └0┼1┼qweA
+        └1┼2┼ertA
+          └2┼4┼tyuA
+            └N┼5┼zxcA
+            └N┼6┼dfsA
+      └0┼2┼qweA
+        └1┼3┼ertA
+          └2┼4┼tyuA
+            └N┼5┼zxcA
+            └N┼6┼dfsA
+      ├124
+      └0┼1┼qweB
+        └1┼2┼erB
+          └2┼4┼tyuB
+            └N┼5┼zxcB
+            └N┼6┼dfsB
+		├125
+      └0┼1┼qweC
+        └1┼2┼erC
+          └2┼4┼tyuC
+            └N┼5┼zxcC
+            └N┼6┼dfsC
+      └0┼2┼qweC
+        └1┼3┼erC
+          └2┼4┼tyuC
+            └N┼5┼zxcC
+            └N┼6┼dfsC
 ```
