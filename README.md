@@ -88,7 +88,7 @@ Multidimentional and inexpensive data format
 **Level 1 with data:**
 * plain:
 ```
-╚0╬1╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0╚0╬2╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0
+╚0╬1╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0╚0╬2╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0├123└0┼1┼qweA└1┼2┼ertA''└2┼4┼tyuA└N┼5┼zxcA└N┼6┼dfsA└0┼2┼qweA└1┼3┼ertA└2┼4┼tyuA└N┼5┼zxcA└N┼6┼dfsA├124└0┼1┼qweB└1┼2┼erB└2┼4┼tyuB└N┼5┼zxcB└N┼6┼dfsB├125└0┼1┼qweC└1┼2┼erC└2┼4┼tyuC└N┼5┼zxcC└N┼6┼dfsC└0┼2┼qweC└1┼3┼erC└2┼4┼tyuC└N┼5┼zxcC└N┼6┼dfsC
 ```
 * indented:
 ```
