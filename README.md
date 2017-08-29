@@ -17,10 +17,16 @@ Multidimentional and inexpensive data format
 ```
 ╚level╬id╬open╬type╬name╬label╬description╬default╚...sublevels...
 ```
-- level: Level number [0,...]
-- id: Identifier of the category. Unique value.
+- level: Category level number [0,...]
+- id: Identifier of the category. Unique value, could be integer or string.
 - open: If will be show as open by default
-- type: Available data types: [data types](#data_types)
+- type: Available [data types](#data_types)
+- name: Category name
+- label: Category label to show
+- description: A description to show the user when interact with the category
+- default: default value for the data in this category
+- sublevels: Children categories
+
 ### Examples:
 **Level 1:**
 * plain:
