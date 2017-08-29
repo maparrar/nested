@@ -91,8 +91,8 @@ Multidimentional and inexpensive data format
 ```
 * indented:
 ```
-		# Headers
-		╚0╬1╬t╬t╬i╬meter╬Meter╬╬0
+      # Headers
+      ╚0╬1╬t╬t╬i╬meter╬Meter╬╬0
         ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
           ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
             ╚N╬5╬t╬t╬i╬other╬Other╬╬0
@@ -102,7 +102,7 @@ Multidimentional and inexpensive data format
           ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
             ╚N╬5╬t╬t╬i╬other╬Other╬╬0
             ╚N╬6╬t╬t╬i╬another╬Another╬╬0
-		# Data
+      # Data
       └0┼1┼qwe
         └1┼2┼ert
           └2┼4┼tyu
