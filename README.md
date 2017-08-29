@@ -44,18 +44,18 @@ Multidimentional and inexpensive data format
 **Level 1:**
 * plain:
 ```
-╚1╬1╬i╬meter╬Meter╬╬0╚2╬3╬i╬centi╬Centimeter╬╬0╚3╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0╚1╬2╬i╬meter╬Meter╬╬0╚2╬3╬i╬centi╬Centimeter╬╬0╚3╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
+╚0╬1╬i╬meter╬Meter╬╬0╚1╬3╬i╬centi╬Centimeter╬╬0╚2╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0╚0╬2╬i╬meter╬Meter╬╬0╚1╬3╬i╬centi╬Centimeter╬╬0╚2╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
 ```
 * indented:
 ```
-      ╚1╬1╬i╬meter╬Meter╬╬0
-        ╚2╬3╬i╬centi╬Centimeter╬╬0
-          ╚3╬4╬i╬milli╬Millimeter╬╬0
+      ╚0╬1╬i╬meter╬Meter╬╬0
+        ╚1╬3╬i╬centi╬Centimeter╬╬0
+          ╚2╬4╬i╬milli╬Millimeter╬╬0
             ╚N╬5╬i╬other╬Other╬╬0
             ╚N╬6╬i╬another╬Another╬╬0
-      ╚1╬2╬i╬meter╬Meter╬╬0
-        ╚2╬3╬i╬centi╬Centimeter╬╬0
-          ╚3╬4╬i╬milli╬Millimeter╬╬0
+      ╚0╬2╬i╬meter╬Meter╬╬0
+        ╚1╬3╬i╬centi╬Centimeter╬╬0
+          ╚2╬4╬i╬milli╬Millimeter╬╬0
             ╚N╬5╬i╬other╬Other╬╬0
             ╚N╬6╬i╬another╬Another╬╬0
 ```
@@ -63,12 +63,12 @@ Multidimentional and inexpensive data format
 **Level 2:**
 * plain:
 ```
-╚2╬3╬i╬centi╬Centimeter╬╬0╚3╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
+╚1╬3╬i╬centi╬Centimeter╬╬0╚2╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
 ```
 * indented:
 ```
-      ╚2╬3╬i╬centi╬Centimeter╬╬0
-        ╚3╬4╬i╬milli╬Millimeter╬╬0
+      ╚1╬3╬i╬centi╬Centimeter╬╬0
+        ╚2╬4╬i╬milli╬Millimeter╬╬0
           ╚N╬5╬i╬other╬Other╬╬0
           ╚N╬6╬i╬another╬Another╬╬0
 ```
@@ -76,11 +76,11 @@ Multidimentional and inexpensive data format
 **Level 3:**
 * plain:
 ```
-╚3╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
+╚2╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
 ```
 * indented:
 ```
-      ╚3╬4╬i╬milli╬Millimeter╬╬0
+      ╚2╬4╬i╬milli╬Millimeter╬╬0
         ╚N╬5╬i╬other╬Other╬╬0
         ╚N╬6╬i╬another╬Another╬╬0
 ```
@@ -93,19 +93,19 @@ Multidimentional and inexpensive data format
 **Level 1 with Metadata:**
 * plain:
 ```
-»id║color║height║width╚1╬1╬i╬meter╬Meter╬╬0╚2╬3╬i╬centi╬Centimeter╬╬0╚3╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0╚1╬2╬i╬meter╬Meter╬╬0╚2╬3╬i╬centi╬Centimeter╬╬0╚3╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
+»id║color║height║width╚0╬1╬i╬meter╬Meter╬╬0╚1╬3╬i╬centi╬Centimeter╬╬0╚2╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0╚0╬2╬i╬meter╬Meter╬╬0╚1╬3╬i╬centi╬Centimeter╬╬0╚2╬4╬i╬milli╬Millimeter╬╬0╚N╬5╬i╬other╬Other╬╬0╚N╬6╬i╬another╬Another╬╬0
 ```
 * indented:
 ```
       »id║color║height║width
-      ╚1╬1╬i╬meter╬Meter╬╬0
-        ╚2╬3╬i╬centi╬Centimeter╬╬0
-          ╚3╬4╬i╬milli╬Millimeter╬╬0
+      ╚0╬1╬i╬meter╬Meter╬╬0
+        ╚1╬3╬i╬centi╬Centimeter╬╬0
+          ╚2╬4╬i╬milli╬Millimeter╬╬0
             ╚N╬5╬i╬other╬Other╬╬0
             ╚N╬6╬i╬another╬Another╬╬0
-      ╚1╬2╬i╬meter╬Meter╬╬0
-        ╚2╬3╬i╬centi╬Centimeter╬╬0
-          ╚3╬4╬i╬milli╬Millimeter╬╬0
+      ╚0╬2╬i╬meter╬Meter╬╬0
+        ╚1╬3╬i╬centi╬Centimeter╬╬0
+          ╚2╬4╬i╬milli╬Millimeter╬╬0
             ╚N╬5╬i╬other╬Other╬╬0
             ╚N╬6╬i╬another╬Another╬╬0
 ```
