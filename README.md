@@ -84,50 +84,30 @@ Multidimentional and inexpensive data format
 ╚N╬5╬t╬t╬i╬other╬Other╬╬0
 ```
 
-**Level 1 with Metadata:**
+**Level 1 with data:**
 * plain:
 ```
-»id║color║height║width╚0╬1╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0╚0╬2╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0
+╚0╬1╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0╚0╬2╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0
 ```
 * indented:
 ```
-      »id║color║height║width
-      ╚0╬1╬t╬t╬i╬meter╬Meter╬╬0
-        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
-          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
-            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
-            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
-      ╚0╬2╬t╬t╬i╬meter╬Meter╬╬0
-        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
-          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
-            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
-            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
-```
-
-**Level 1 with Metadata and data:**
-* plain:
-```
-»id║color║height║width╚0╬1╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0╚0╬2╬t╬t╬i╬meter╬Meter╬╬0╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0╚N╬5╬t╬t╬i╬other╬Other╬╬0╚N╬6╬t╬t╬i╬another╬Another╬╬0
-```
-* indented:
-```
-      »id║color║height║width
-      ╚0╬1╬t╬t╬i╬meter╬Meter╬╬0
-        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
-          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
-            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
-            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
-      ╚0╬2╬t╬t╬i╬meter╬Meter╬╬0
-        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
-          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
-            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
-            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
-
+		# Headers
 		╚0╬1╬t╬t╬i╬meter╬Meter╬╬0
         ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
           ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
             ╚N╬5╬t╬t╬i╬other╬Other╬╬0
             ╚N╬6╬t╬t╬i╬another╬Another╬╬0
+      ╚0╬2╬t╬t╬i╬meter╬Meter╬╬0
+        ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
+          ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
+            ╚N╬5╬t╬t╬i╬other╬Other╬╬0
+            ╚N╬6╬t╬t╬i╬another╬Another╬╬0
+		# Data
+      └0┼1┼qwe
+        └1┼2┼ert
+          └2┼4┼tyu
+            └N┼5┼zxc
+            └N┼5┼dfs
       ╚0╬2╬t╬t╬i╬meter╬Meter╬╬0
         ╚1╬3╬t╬t╬i╬centi╬Centimeter╬╬0
           ╚2╬4╬t╬t╬i╬milli╬Millimeter╬╬0
