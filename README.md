@@ -16,14 +16,14 @@ Multidimentional and inexpensive data format
 »id║field_1║field_2║field_3║...║field_M
 ```
 - id: Register identifier
-- field_M: Any additional field that will not shown
+- field_M: Any additional field that is not going to be shown
 
 ### Levels:
 ```
 ╚level╬id╬open╬type╬name╬label╬description╬default╚...sublevels...
 ```
 - level: Category level number [0,...]
-- id: Identifier of the category. Unique value, could be integer or string.
+- id: Identifier of the category. Unique value, could be integer or string
 - open: If will be show as open by default [t, f]
 - type: Available [data types](#data_types)
 - name: Category name
@@ -32,7 +32,15 @@ Multidimentional and inexpensive data format
 - default: default value for the data in this category
 - sublevels: Children categories
 
-### Examples:
+## Data format
+```
+└level┼id┼value
+```
+- level: Category level number [0,...]
+- id: Identifier of the category
+- value: Value for the register in the level and category
+
+## Examples:
 **Level 1:**
 * plain:
 ```
@@ -89,7 +97,7 @@ Multidimentional and inexpensive data format
 ```
 * indented:
 ```
-		»id║color║height║width
+      »id║color║height║width
       ╚1╬1╬i╬meter╬Meter╬╬0
         ╚2╬3╬i╬centi╬Centimeter╬╬0
           ╚3╬4╬i╬milli╬Millimeter╬╬0
@@ -102,6 +110,7 @@ Multidimentional and inexpensive data format
             ╚N╬6╬i╬another╬Another╬╬0
 ```
 
+=============================================================
 ## Data format
 
 
